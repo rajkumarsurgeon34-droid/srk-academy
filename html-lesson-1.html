@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HTML Lesson 1 | SRK Academy</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1120;
+      color: #f1f5f9;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 18px 7%;
+      background: #111c32;
+      border-bottom: 1px solid #293650;
+    }
+
+    header a {
+      color: #67e8f9;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 5px 12px;
+      border-radius: 20px;
+      background: #164e63;
+      color: #a5f3fc;
+      font-size: 13px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 5vw, 42px);
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #67e8f9;
+    }
+
+    .card {
+      background: #111c32;
+      border: 1px solid #293650;
+      border-radius: 14px;
+      padding: 22px;
+      margin: 22px 0;
+    }
+
+    .example {
+      background: #070c17;
+      border-left: 4px solid #67e8f9;
+      padding: 15px;
+      overflow-x: auto;
+      color: #a5f3fc;
+      white-space: pre-wrap;
+    }
+
+    .workspace {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 270px;
+      padding: 15px;
+      background: #070c17;
+      color: #d1fae5;
+      border: 1px solid #40516f;
+      border-radius: 8px;
+      font-family: Consolas, monospace;
+      font-size: 14px;
+      resize: vertical;
+    }
+
+    iframe {
+      width: 100%;
+      height: 270px;
+      background: white;
+      border: 0;
+      border-radius: 8px;
+    }
+
+    button {
+      padding: 12px 18px;
+      margin-top: 12px;
+      margin-right: 8px;
+      border: 0;
+      border-radius: 8px;
+      background: #06b6d4;
+      color: #06202b;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #67e8f9;
+    }
+
+    .secondary {
+      background: #293650;
+      color: white;
+    }
+
+    #feedback {
+      padding: 12px;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+
+    .success {
+      background: #14532d;
+      color: #bbf7d0;
+    }
+
+    .error {
+      background: #7f1d1d;
+      color: #fecaca;
+    }
+
+    .lesson-nav {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    footer {
+      text-align: center;
+      color: #94a3b8;
+      padding: 25px;
+    }
+
+    @media (max-width: 700px) {
+      .workspace {
+        grid-template-columns: 1fr;
+      }
+
+      main {
+        padding: 20px 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html">← SRK Academy</a>
+</header>
+
+<main>
+
+  <span class="badge">HTML • Beginner • Lesson 1</span>
+
+  <h1>Your First HTML Page 🚀</h1>
+
+  <p>
+    Welcome to your first coding lesson!
+    Learn how websites display headings, paragraphs and text.
+  </p>
+
+  <section class="card">
+    <h2>1. What is HTML?</h2>
+
+    <p>
+      HTML stands for HyperText Markup Language.
+      It tells a web browser how to structure a webpage.
+    </p>
+
+    <p>Here are three important HTML elements:</p>
+
+    <ul>
+      <li><strong>&lt;h1&gt;</strong> — creates a main heading.</li>
+      <li><strong>&lt;p&gt;</strong> — creates a paragraph.</li>
+      <li><strong>&lt;button&gt;</strong> — creates a clickable button.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>2. Your first example</h2>
+
+    <pre class="example">&lt;h1&gt;Hello World!&lt;/h1&gt;
+&lt;p&gt;I am learning HTML.&lt;/p&gt;</pre>
+
+    <p>
+      The browser displays a heading followed by a paragraph.
+      Try changing the text in the coding editor below.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>3. Practice coding</h2>
+
+    <p>
+      Edit the HTML code on the left.
+      Click <strong>Run Code</strong> to see your webpage on the right.
+    </p>
+
+    <div class="workspace">
+
+      <div>
+        <h3>Your code</h3>
+
+        <textarea id="code" spellcheck="false"><h1>Hello World!</h1>
+<p>I am learning HTML at SRK Academy.</p>
+<button>Click Me</button></textarea>
+
+        <button onclick="runCode()">▶ Run Code</button>
+
+        <button class="secondary" onclick="resetCode()">
+          Reset
+        </button>
+      </div>
+
+      <div>
+        <h3>Live preview</h3>
+        <iframe
+          id="preview"
+          title="Your HTML preview"
+          sandbox=""
+        ></iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>4. Your coding challenge 🧩</h2>
+
+    <p>
+      Create a webpage that contains:
+    </p>
+
+    <ol>
+      <li>A heading that says <strong>My First Website</strong>.</li>
+      <li>A paragraph that says <strong>I love coding!</strong>.</li>
+    </ol>
+
+    <p>Write your answer in the editor above and click Run Code.</p>
+
+    <button onclick="checkAnswer()">Check My Answer</button>
+
+    <div id="feedback" hidden aria-live="polite"></div>
+  </section>
+
+  <section class="card">
+    <h2>5. What you learned</h2>
+
+    <ul>
+      <li>What HTML is used for.</li>
+      <li>How to create headings using h1.</li>
+      <li>How to create paragraphs using p.</li>
+      <li>How to run your code and view the result.</li>
+    </ul>
+
+    <p>
+      Great work! You have taken your first step toward becoming a developer.
+    </p>
+
+    <div class="lesson-nav">
+      <a href="index.html">← Back to Academy Home</a>
+      <span>Next: HTML Lesson 2 (coming soon)</span>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 SRK Academy | Learn • Practice • Build
+</footer>
+
+<script>
+  const editor = document.getElementById("code");
+  const preview = document.getElementById("preview");
+  const feedback = document.getElementById("feedback");
+
+  const starterCode =
+`<h1>Hello World!</h1>
+<p>I am learning HTML at SRK Academy.</p>
+<button>Click Me</button>`;
+
+  function runCode() {
+    // Render HTML inside a sandboxed iframe.
+    preview.srcdoc = editor.value;
+  }
+
+  function resetCode() {
+    editor.value = starterCode;
+    feedback.hidden = true;
+    runCode();
+  }
+
+  function checkAnswer() {
+    // Read the student's HTML as text, without executing it.
+    const parsed = new DOMParser().parseFromString(
+      editor.value,
+      "text/html"
+    );
+
+    const heading = parsed.querySelector("h1");
+    const paragraph = parsed.querySelector("p");
+
+    const headingCorrect =
+      heading &&
+      heading.textContent.trim() === "My First Website";
+
+    const paragraphCorrect =
+      paragraph &&
+      paragraph.textContent.trim() === "I love coding!";
+
+    feedback.hidden = false;
+
+    if (headingCorrect && paragraphCorrect) {
+      feedback.className = "success";
+      feedback.textContent =
+        "🎉 Excellent! Both answers are correct. You completed the challenge!";
+    } else {
+      feedback.className = "error";
+      feedback.textContent =
+        "Not quite! Check your h1 heading and p paragraph, then try again.";
+    }
+  }
+
+  runCode();
+</script>
+
+</body>
+</html>
